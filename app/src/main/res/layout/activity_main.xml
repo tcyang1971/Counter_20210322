@@ -43,4 +43,10 @@
         android:textSize="30sp"
         android:onClick="Add"/>
 
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
 </LinearLayout>
