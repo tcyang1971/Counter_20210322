@@ -24,6 +24,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
         })
+
+        txv.setOnLongClickListener(object:View.OnLongClickListener{
+            override fun onLongClick(v: View?): Boolean {
+                counter+=2
+                txv.text = counter.toString()
+                return true
+            }
+        })
     }
 
 
