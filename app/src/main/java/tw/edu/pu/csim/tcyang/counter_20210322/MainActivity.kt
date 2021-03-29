@@ -15,7 +15,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
         txv.setOnClickListener(this)
         img.setOnClickListener(this)
-        btn4.setOnClickListener(this)
+        //btn4.setOnClickListener(this)
+
+        btn4.setOnClickListener(object:View.OnClickListener{
+            override fun onClick(v: View?) {
+                counter= (1..100).random()
+                txv.text = counter.toString()
+            }
+
+        })
     }
 
 
@@ -41,10 +49,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         else if (v == img){
             counter+=2
         }
+        /*
         else{
             counter= (1..100).random()
             txv.text = counter.toString()
         }
+
+         */
         txv.text = counter.toString()
     }
 
